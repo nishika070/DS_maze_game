@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maze Game Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-100 to-gray-300 h-screen flex items-center justify-center">
+
+  <div class="bg-white p-10 rounded-2xl shadow-xl w-[420px] text-center border border-gray-200">
+    
+    <h1 class="text-4xl font-bold mb-8">🧩 Maze Game</h1>
+
+    <button onclick="window.location.href='difficulty.html'" 
+      class="w-full py-3 bg-blue-600 text-white rounded-lg mb-3 hover:bg-blue-700 transition">
+      🎮 Generate & Play New Maze
+    </button>
+
+    <button onclick="window.location.href='solve.html'" 
+      class="w-full py-3 bg-green-600 text-white rounded-lg mb-3 hover:bg-green-700 transition">
+      🤖 Solve Maze Automatically
+    </button>
+
+    <button onclick="showalert()" 
+      class="w-full py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+      ❌ Quit
+      
+    </button>
+    <script>
+        function showalert(){
+            alert("Thank you for playing :)");
+            window.close();
+        }
+    </script>
+
+  </div>
+
+</body>
+</html>

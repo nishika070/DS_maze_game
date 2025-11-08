@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maze Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    #maze {
+      display: grid;
+      grid-template-columns: repeat(7, 48px);
+      gap: 6px;
+    }
+
+    .cell {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .wall { background: #b91c1c; }
+    .path { background: #e5e7eb; }
+    .player { background: #ff4b4b; }
+    .goal { background: gold; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-gray-300 h-screen flex items-center justify-center">
+
+  <div class="shadow-xl bg-white p-10 rounded-2xl w-[420px] text-center border border-gray-200">
+    <button onclick="window.location.href='menu.html'" 
+  class="mb-4 bg-gray-600 text-white px-4 py-1 rounded hover:bg-gray-700">
+  ⬅ Back to Menu
+</button>
+
+    <h1 class="text-3xl font-bold mb-6">🎮 Maze Game</h1>
+
+    <div id="maze" class="mx-auto mb-6"></div>
+
+    <p class="text-gray-700 text-lg font-medium mb-1">Use keys to move:</p>
+    <p class="text-gray-900 font-bold tracking-widest text-xl">W • A • S • D</p>
+
+    <p class="mt-4 text-sm text-gray-600 italic">
+      Reach the 🚩 to win!
+    </p>
+  </div>
+
+  <!-- WebAssembly Loader -->
+  <script>
+    var Module = {
+      locateFile: (path) => path
+    };
+  </script>
+
+  <script src="maze.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

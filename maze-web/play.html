@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maze</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    #maze { display: grid; gap: 3px; }
+    .cell { border-radius: 4px; display:flex; justify-content:center; align-items:center; font-size:22px; }
+    .wall { background: #1f2937; }
+    .path { background: #e5e7eb; }
+    .player { background: #ff4b4b; color:white; }
+    .goal { background: gold; }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-100 to-gray-300 h-screen flex items-center justify-center">
+
+<div class="bg-white p-8 rounded-xl shadow-lg text-center max-w-[500px]">
+
+  <button onclick="window.location.href='difficulty.html'" 
+    class="mb-4 bg-gray-600 text-white px-4 py-1 rounded hover:bg-gray-700">
+    ⬅ Back
+  </button>
+
+  <h1 class="text-3xl font-bold mb-4">🧱 Random Maze</h1>
+
+  <div id="maze"></div>
+
+  <button id="solveBtn"
+    class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+    🤖 Auto Solve
+  </button>
+
+  <p class="text-lg font-semibold mt-4">Moves: <span id="moves">0</span></p>
+  <p class="text-lg font-semibold">Time: <span id="timer">0</span>s</p>
+  <p class="text-lg font-semibold">Player: <span id="skin">🙂</span></p>
+
+  <div class="flex justify-center gap-2 mt-2">
+    <button onclick="changeSkin('🙂')" class="px-2 py-1 rounded bg-gray-200 hover:bg-gray-300">🙂</button>
+    <button onclick="changeSkin('🐱')" class="px-2 py-1 rounded bg-gray-200 hover:bg-gray-300">🐱</button>
+    <button onclick="changeSkin('🐸')" class="px-2 py-1 rounded bg-gray-200 hover:bg-gray-300">🐸</button>
+    <button onclick="changeSkin('🦊')" class="px-2 py-1 rounded bg-gray-200 hover:bg-gray-300">🦊</button>
+  </div>
+
+  <p class="mt-3 text-gray-600">Use W A S D to move</p>
+
+</div>
+
+<script src="play.js"></script>
+</body>
+</html>

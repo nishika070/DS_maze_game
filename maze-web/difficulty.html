@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Difficulty</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-100 to-gray-300 h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-xl shadow-lg w-[420px] text-center">
+
+    <h1 class="text-3xl font-bold mb-6">🎯 Select Difficulty</h1>
+
+    <button onclick="window.location.href='play.html?size=7'"
+      class="w-full py-3 bg-blue-600 text-white rounded-lg mb-3 hover:bg-blue-700 transition">
+      Easy (7 x 7)
+    </button>
+
+    <button onclick="window.location.href='play.html?size=15'"
+      class="w-full py-3 bg-purple-600 text-white rounded-lg mb-3 hover:bg-purple-700 transition">
+      Medium (15 x 15)
+    </button>
+
+    <button onclick="window.location.href='play.html?size=25'"
+      class="w-full py-3 bg-red-600 text-white rounded-lg mb-4 hover:bg-red-700 transition">
+      Hard (25 x 25)
+    </button>
+
+    <button onclick="window.location.href='menu.html'"
+      class="mt-4 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+      ⬅ Back to Menu
+    </button>
+
+  </div>
+</body>
+</html>
